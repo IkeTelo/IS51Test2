@@ -16,4 +16,16 @@ Number of grades: 24
 Average grade: 83.25
 % of grades above average: 54.17
 """
-
+# Pseudo Code
+"""
+open file (Final.txt)
+numbers separated by " " are test_scores
+Display the num_of_scores / 24
+Add all test_scores and divide by num_of_scores = average_score
+Display the average_score / 83.25
+for each test_score:
+If test_score > average_score
+then add 1 to num_above_average
+divide num_above_average by num_of_scores to get = percent_above_average
+display percent_above_average / 54.17
+"""
