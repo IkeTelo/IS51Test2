@@ -19,13 +19,33 @@ Average grade: 83.25
 # Pseudo Code
 """
 open file (Final.txt)
-numbers separated by " " are test_scores
-Display the num_of_scores / 24
-Add all test_scores and divide by num_of_scores = average_score
-Display the average_score / 83.25
-for each test_score:
-If test_score > average_score
-then add 1 to num_above_average
-divide num_above_average by num_of_scores to get = percent_above_average
-display percent_above_average / 54.17
+make variable for grades strip from list
+len(grades) get length of list
+Int counter and sum of grades
+add grades togeather for sum
+average equasion is sum(grades)/len(grades)
+int counter and set sum to '0'
+num = 0 to get started with above average grades
+if grade is greather than average
+num +=1
+use the "{0:2f}%" for equasion and
+(100*num)/len(grades) for formatting percentage
+print "num of grades"
+print" average grade"
+print "% of grades > average" 
 """
+# Exam End
+
+infile = open("Final.txt", 'r')
+grades = [line.rstrip() for line in infile]
+infile.close()
+for i in range(len(grades)):
+    grades[i] = int(grades[i])
+average = sum(grades)/len(grades)
+num = 0
+for grade in grades:
+    if grade > average:
+        num += 1
+print("Number of grades:", len(grades))
+print("Average grade:", average)
+print("Percent of grades above average: {0:.2f}%".format(100 * num / len(grades)))
